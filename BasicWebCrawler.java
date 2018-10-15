@@ -32,7 +32,7 @@ public class BasicWebCrawler {
                 for (Element page : linksOnPage) {
                 	//getPageWiseLinks(page.attr("abs:href"));
                 	//Extract links that contain the domain prudential.co.uk
-    				if(page.attr("href").contains("mkyong.com"))
+    				if(page.attr("href").contains("prudential.co.uk"))
     					getPageWiseLinks(page.attr("abs:href"));                	
                 }
             } catch (IOException e) {
@@ -43,6 +43,6 @@ public class BasicWebCrawler {
     }    
     public static void main(String[] args) {
         //1. Pick a URL from the frontier
-        new BasicWebCrawler().getPageWiseLinks("http://www.prudential.co.uk/");
+        new BasicWebCrawler().getPageWiseLinks("https://www.prudential.co.uk/");
     }
 }
